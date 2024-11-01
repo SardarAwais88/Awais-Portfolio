@@ -36,7 +36,7 @@ const Projects = () => {
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         />
         <ProjectCard
-          src="/Space Portfolio Assets/celebrity voices bot.png"
+          src="/Space Portfolio Assets/celebrityvoicesbot.png"
           title="Celebrity Voice Bot"
           description="User give any text to telegram bot and it will give the response on Voices."
         />
