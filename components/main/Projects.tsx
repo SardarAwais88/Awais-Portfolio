@@ -43,7 +43,7 @@ const Projects = () => {
 
 
 <ProjectCard
-          src="/Space Portfolio Assets/completewebsiteworkchatbot.png"
+          src="/Space Portfolio Assets/celebrityvoicesbot.png"
           title="Complete Website Chatbot"
           description="A Website Chatbot that work on website its already develop and integrate on website where
           user ask their question and it will give response back to user"
