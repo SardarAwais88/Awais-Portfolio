@@ -1,0 +1,268 @@
+.skillsSection {
+  padding-top: 140px;
+}
+
+/* ── Tabs ──────────────────────────────────────────────── */
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 48px;
+}
+
+.tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  background: var(--bg-card);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  color: var(--text-secondary);
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab:hover {
+  border-color: var(--accent-primary);
+}
+
+.tabActive {
+  box-shadow: 0 0 20px rgba(0, 245, 212, 0.1);
+}
+
+.tabIcon {
+  font-size: 1.1rem;
+}
+
+/* ── Skills Display ────────────────────────────────────── */
+.skillsDisplay {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 40px;
+  align-items: start;
+}
+
+.skillsList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skillItem {
+}
+
+.skillHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.skillInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.skillIcon {
+  font-size: 1.2rem;
+}
+
+.skillName {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.skillStats {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.skillProjects {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.skillLevel {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.progressBar {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Category Summary ──────────────────────────────────── */
+.categorySummary {
+  position: sticky;
+  top: 100px;
+}
+
+.summaryCard {
+  background: var(--bg-card);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  text-align: center;
+}
+
+.summaryIcon {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin: 0 auto 20px;
+}
+
+.summaryTitle {
+  font-size: 1.3rem;
+  margin-bottom: 24px;
+}
+
+.summaryStats {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.summaryStat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.summaryStat:last-child {
+  border-bottom: none;
+}
+
+.summaryValue {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+}
+
+.summaryLabel {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* ── Overview Section ──────────────────────────────────── */
+.overviewSection {
+  margin-top: 100px;
+}
+
+.overviewTitle {
+  text-align: center;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  margin-bottom: 48px;
+}
+
+.overviewGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.overviewCard {
+  background: var(--bg-card);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  transition: all var(--transition-medium);
+}
+
+.overviewCard:hover {
+  border-color: var(--glass-border-hover);
+  box-shadow: var(--shadow-glow-cyan);
+}
+
+.overviewHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.overviewIcon {
+  font-size: 1.5rem;
+}
+
+.overviewName {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.overviewSkills {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.miniSkill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+}
+
+.miniSkillName {
+  flex-grow: 1;
+  color: var(--text-secondary);
+}
+
+.miniSkillLevel {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.78rem;
+}
+
+/* ── Responsive ────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .skillsDisplay {
+    grid-template-columns: 1fr;
+  }
+
+  .categorySummary {
+    position: static;
+  }
+
+  .overviewGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .tabs {
+    gap: 8px;
+  }
+
+  .tab {
+    padding: 8px 16px;
+    font-size: 0.78rem;
+  }
+}

@@ -1,0 +1,245 @@
+.servicesSection {
+  padding-top: 140px;
+}
+
+/* ── Services Grid ─────────────────────────────────────── */
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.serviceCard {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: all var(--transition-medium);
+  overflow: hidden;
+}
+
+.serviceCard:hover {
+  border-color: var(--glass-border-hover);
+  box-shadow: var(--shadow-glow-cyan);
+  transform: translateY(-6px);
+}
+
+.serviceCard.popular {
+  border-color: rgba(123, 97, 255, 0.3);
+  box-shadow: 0 0 30px rgba(123, 97, 255, 0.1);
+}
+
+.popularBadge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 4px 12px;
+  background: var(--accent-secondary);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  border-radius: var(--radius-xl);
+  letter-spacing: 0.05em;
+}
+
+.serviceGlow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 150px;
+  pointer-events: none;
+}
+
+.serviceIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  position: relative;
+}
+
+.serviceTitle {
+  font-size: 1.15rem;
+  font-weight: 600;
+  position: relative;
+}
+
+.serviceDesc {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  position: relative;
+}
+
+.featureList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+  position: relative;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.featureCheck {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.serviceBottom {
+  padding-top: 16px;
+  border-top: 1px solid var(--glass-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-top: auto;
+}
+
+.priceRange {
+  display: flex;
+  flex-direction: column;
+}
+
+.priceLabel {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.priceValue {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.serviceBtn {
+  padding: 8px 20px;
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.serviceBtn:hover {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+  box-shadow: 0 0 15px rgba(0, 245, 212, 0.15);
+}
+
+/* ── Process ───────────────────────────────────────────── */
+.processSection {
+  background: var(--bg-secondary);
+}
+
+.processGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.processCard {
+  background: var(--bg-card);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  text-align: center;
+  transition: all var(--transition-medium);
+  position: relative;
+}
+
+.processCard:hover {
+  border-color: var(--glass-border-hover);
+  box-shadow: var(--shadow-glow-cyan);
+  transform: translateY(-4px);
+}
+
+.processNumber {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.03);
+  line-height: 1;
+}
+
+.processIcon {
+  font-size: 2.2rem;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.processTitle {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.processDesc {
+  font-size: 0.83rem;
+  line-height: 1.7;
+}
+
+/* ── CTA ───────────────────────────────────────────────── */
+.ctaSection {
+  padding-bottom: 100px;
+}
+
+.ctaCard {
+  background: var(--bg-card);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  padding: 64px 48px;
+  text-align: center;
+}
+
+.ctaTitle {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  margin-bottom: 16px;
+}
+
+.ctaDesc {
+  font-size: 1.05rem;
+  max-width: 500px;
+  margin: 0 auto 32px;
+  line-height: 1.8;
+}
+
+/* ── Responsive ────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .servicesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .servicesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .processGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .ctaCard {
+    padding: 40px 24px;
+  }
+}
